@@ -19,6 +19,51 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 0 4%;
+    box-sizing: border-box;
+}
+
+.nav-brand {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.nav-contact-info {
+    text-align: right;
+    color: #ffffff;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.contact-name {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.contact-number {
+    font-size: 0.85rem;
+}
+
+.nav-actions {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-tally-logo {
+    background: #ffffff;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-tally-logo img {
+    height: 24px;
 }
 
 .logo {
@@ -49,6 +94,8 @@
 .nav-links {
     display: flex;
     gap: 2rem;
+    flex: 1;
+    justify-content: center;
 }
 
 .nav-links a {
@@ -128,22 +175,46 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .nav-contact-info {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: flex !important;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
     .logo {
         font-size: 1rem;
         padding: 0.4rem 0.6rem;
     }
+}
 
+@media (max-width: 576px) {
     .logo-text {
         white-space: normal;
         line-height: 1.2;
-    }
-
-    .desktop-only {
-        display: none;
-    }
-
-    .mobile-only {
-        display: block;
+        font-size: 0.9rem;
     }
 }

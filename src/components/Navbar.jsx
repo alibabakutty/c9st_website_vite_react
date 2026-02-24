@@ -17,10 +17,12 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container nav-content">
-        <div className="logo">
-          <Cloud className="logo-icon" size={24} color="#ffffff" />
-          <span className="logo-text">Cloud 9 Soft Technologies</span>
+      <div className="nav-content">
+        <div className="nav-brand">
+          <div className="logo">
+            <Cloud className="logo-icon" size={24} color="#ffffff" />
+            <span className="logo-text">Cloud 9 Soft Technologies</span>
+          </div>
         </div>
 
         <div className="nav-links desktop-only">
@@ -30,26 +32,27 @@ const Navbar = () => {
           <a href="#contact">Contact</a>
         </div>
 
-        <div className="nav-actions desktop-only" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <div className="nav-contact-info" style={{ textAlign: 'right', color: '#ffffff', fontSize: '0.85rem', lineHeight: '1.4' }}>
-            <div style={{ fontWeight: '600', letterSpacing: '0.5px' }}>Tally Perumal</div>
-            <div>+91-99400 13931</div>
+        <div className="nav-actions desktop-only">
+          <div className="nav-contact-info">
+            <div className="contact-name">Tally Perumal</div>
+            <div className="contact-number">+91-9940013931</div>
           </div>
-          <div style={{ background: '#ffffff', padding: '0.2rem 0.4rem', borderRadius: '4px', display: 'flex', alignItems: 'center' }}>
+          <div className="nav-tally-logo">
             <img
               src={tallyLogo}
               alt="Tally Logo"
-              style={{ height: '24px' }}
             />
           </div>
         </div>
 
-        <button
-          className="mobile-toggle mobile-only"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="mobile-only mobile-toggle-container">
+          <button
+            className="mobile-toggle"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
