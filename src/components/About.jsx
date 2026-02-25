@@ -8,7 +8,7 @@ const About = () => {
                 <div className="section-header text-center animate-fade-in">
                     <div className="badge glass-panel">Our Story</div>
                     <h2 className="section-title">
-                        About <span className="text-gradient">Cloud 9 Soft Technologies</span>
+                        <span className="text-gradient">Cloud 9 Soft Technologies</span>
                     </h2>
                 </div>
 

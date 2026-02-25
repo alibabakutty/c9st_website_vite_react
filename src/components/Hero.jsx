@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Code, Database, Server } from 'lucide-react';
+import heroImage from '../assets/about_professional.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -12,14 +13,38 @@ const Hero = () => {
 
             <div className="container hero-content">
                 <div className="hero-text animate-fade-in">
-                    <div className="badge glass-panel">Innovating the Future</div>
-                    <h5 className="hero-title">
-                        Experience Business Beyond Limits<br />
-                        <span className="text-gradient">At Cloud 9</span>
-                    </h5>
-                    <p className="hero-subtitle delay-100">
-                        Your partner in Accounting Management. We specialize in providing comprehensive Tally solutions that help businesses achieve greater efficiency, accuracy, and growth.
-                    </p>
+                    <h1 className="hero-title" style={{ fontSize: '2.5rem', marginBottom: '1.2rem' }}>
+                        Transform Business with<br />
+                        <span className="text-gradient">Tally Solutions</span>
+                    </h1>
+
+                    <div className="hero-features delay-100">
+                        <div className="hero-feature-item">
+                            <div className="feature-icon-wrapper">
+                                <Code size={20} color="var(--accent-primary)" />
+                            </div>
+                            <div className="feature-text">
+                                <strong>Customization & Integration:</strong> Advanced customization of Tally software to suit unique requirements, ensuring seamless integration.
+                            </div>
+                        </div>
+                        <div className="hero-feature-item">
+                            <div className="feature-icon-wrapper">
+                                <Server size={20} color="var(--accent-secondary)" />
+                            </div>
+                            <div className="feature-text">
+                                <strong>End-to-End Solutions:</strong> Comprehensive Tally ERP 9 and Tally Prime services for accurate financial management.
+                            </div>
+                        </div>
+                        <div className="hero-feature-item">
+                            <div className="feature-icon-wrapper">
+                                <Database size={20} color="#00ffcc" />
+                            </div>
+                            <div className="feature-text">
+                                <strong>User Training & Support:</strong> Empowering users through hands-on training and dedicated support to maximize potential.
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="hero-cta delay-200">
                         <a href="#services" className="btn btn-primary">
                             Explore Our Services <ArrowRight size={20} style={{ marginLeft: '8px' }} />
@@ -31,18 +56,11 @@ const Hero = () => {
                 </div>
 
                 <div className="hero-visual animate-fade-in delay-300">
-                    <div className="floating-card glass-panel card-1">
-                        <Code color="var(--accent-primary)" size={32} />
-                        <p>Tally Developer</p>
-                    </div>
-                    <div className="floating-card glass-panel card-2">
-                        <Database color="var(--accent-secondary)" size={32} />
-                        <p>Tally Integration</p>
-                    </div>
-                    <div className="floating-card glass-panel card-3">
-                        <Server color="#00ffcc" size={32} />
-                        <p>Tally on AWS</p>
-                    </div>
+                    <img
+                        src={heroImage}
+                        alt="Tally Solutions Illustration"
+                        className="hero-illustration"
+                    />
                 </div>
             </div>
         </section>

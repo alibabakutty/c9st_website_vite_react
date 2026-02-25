@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="nav-actions desktop-only">
           <div className="nav-contact-info">
             <div className="contact-name">Tally Perumal</div>
-            <div className="contact-number">+91-9940013931</div>
+            <div className="contact-number">+91-99400 13931</div>
           </div>
           <div className="nav-tally-logo">
             <img
